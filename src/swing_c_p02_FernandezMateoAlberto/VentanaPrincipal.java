@@ -81,24 +81,24 @@ public class VentanaPrincipal extends JFrame  implements ActionListener{
         itemGuardar.addActionListener( e -> guardarComoNativo() );
         itemBajasRevservas.addActionListener(e -> JOptionPane.showMessageDialog(this, "No está desarrollada."));
         itemAcercaDe.addActionListener(e -> JOptionPane.showMessageDialog(this, "Nombre de la empresa: Hotel Gran Huercal de Almeria\n Versión: 1.0\n Autor: Alberto Fernandez Mateo\n Curso: 2 DAM"));
-
         this.setJMenuBar(barraJMenuBar);
 
         botonBajaReserva= new JButton();
         botonBajaReserva.setText(" Boton Baja Reserva");
-        botonBajaReserva.setBounds(40, 80, 200, 25);
+        botonBajaReserva.setBounds(152, 170, 230, 80);
         botonBajaReserva.addActionListener(this);
 
         botonAltaReserva= new JButton();
         botonAltaReserva.setText("Boton Alta Reserva");
-        botonAltaReserva.setBounds(260, 80, 200, 25);
+        botonAltaReserva.setBounds(402, 170, 230, 80);
         botonAltaReserva.addActionListener(this);
-
+        getRootPane().setDefaultButton(botonAltaReserva);
 
 
         ventana.add(botonBajaReserva);
         ventana.add(botonAltaReserva);
 
+        botonBajaReserva.addActionListener(e -> JOptionPane.showMessageDialog(this, "Esta opción no esta implementada todavía."));
 
     }
 
